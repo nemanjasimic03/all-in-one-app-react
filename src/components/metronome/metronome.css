@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Poppins&display=swap');
+.fancy-font{
+    font-family: 'Eczar', serif;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 320px;
+    height:5px;
+    background-color: #ccc;
+    border-radius: 6px;
+    outline: none;
+    cursor: grab;
+    position: relative;
+    /* top: 50%; */
+    
+  }
+  
+  /* Default styling for WebKit-based browsers (Chrome, Safari, etc.) */
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.394)
+  }
+  
+  /* Additional styling for Firefox */
+  input[type="range"]::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .notes div{
+    width: 90px;
+    height: 80px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .notes img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    padding: 10px 0;
+    
+  }
+  .notes div:hover{
+    /* border-bottom: 4px solid orangered; */
+    background-color: orangered;
+    background-color: rgb(249, 115, 22);
+  }
+  
+  .play{
+    position: relative;
+    left: 3px;
+  }
+  
+  .controlBar img{
+    width: 40px;
+    padding: 13px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  
+  .hoverAnimation:hover{
+    transform: scale(103%);
+    transition: 0.2s;
+  }
+  .controls{
+    padding: 10px;
+    color: white;
+    position: absolute;
+    top: -80%;
+    left: -3px;
+  }
+  .control-btn{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  
+  .hovered{
+    background-color: rgb(249, 115, 22) !important;
+  }

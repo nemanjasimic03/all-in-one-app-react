@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Tracker from './components/expense tracker/Tracker';
+import Metronome from './components/metronome/Metronome';
+import ToDo from './components/todo/ToDo';
+import Card from './components/weather/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <h1 className='text-black text-8xl text-center p-8 fancy-font '>All in One App</h1>
+    <div className="App flex flex-row gap-[20px] flex-wrap">
+          <ToDo/>
+          <Card/>
+          <Tracker/>
+          <Metronome/>
     </div>
+    </>
   );
 }
 
