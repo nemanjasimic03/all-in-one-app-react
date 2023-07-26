@@ -67,7 +67,7 @@ const Metronome = () => {
   };
 
   return (
-    <div className="flex flex-col bg-neutral-900 opacity-90 h-[550px] self-center gap-10 justify-center w-[580px]">
+    <div className="flex flex-col bg-neutral-900 opacity-90 h-[530px] self-center gap-10 justify-center w-[530px]">
       <div className="flex flex-row justify-center">
         <h1 className="text-[105px] font-bold text-orange-500 fancy-font">
           {tempo}

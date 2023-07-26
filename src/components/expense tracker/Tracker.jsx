@@ -41,8 +41,9 @@ const Tracker = () => {
   }
     
   useEffect(() => {
+    setCur("rsd")
     const localCur = localStorage.getItem("currency");
-    if (localCur === null) {
+    if (localCur === null || localCur === undefined ) {
       setCur("rsd");
     } else {
       setCur(JSON.parse(localCur));
@@ -100,7 +101,7 @@ const Tracker = () => {
   }
 
   return (
-    <div className='flex flex-col container gap-[1.3rem] relative justify-center align-middle'>
+    <div className='flex flex-col container gap-[0.5rem] relative justify-center align-middle'>
       <div className='currency'>
         <h4 onClick={convert} className={cur==="eur" ? "active" : ""} >EUR</h4>
         <h4 onClick={convert} className={cur==="rsd" ? "active" : ""}>RSD</h4>
