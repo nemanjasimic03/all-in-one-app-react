@@ -14,11 +14,10 @@ body{
 h1{
     font-size: 1.7rem;
 }
-.flex{
+.flexbox{
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center; 
 }
 .column{
     flex-direction: column;

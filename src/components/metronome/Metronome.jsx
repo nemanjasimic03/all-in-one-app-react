@@ -74,7 +74,7 @@ const Metronome = () => {
           <span className="text-[50px] fancy-font "> BPM</span>
         </h1>
       </div>
-      <div className="flex justify-around align-middle controlBar gap-3">
+      <div className="flex justify-around items-center controlBar gap-3">
         <button onClick={() => setTempo((prevTempo) => Math.max(10, prevTempo - 1))}>
           <img src={minus} alt="" />
         </button>
@@ -90,12 +90,12 @@ const Metronome = () => {
           <img src={plus} alt="" />
         </button>
       </div>
-      <div className="flex-row">
+      <div className="flex flex-row justify-center items-center">
         <button onClick={handlePlayPause} className="p-[20px] hover:bg-orange-500 rounded-full bg-white">
           <img src={isPlaying ? pauseBtn : playBtn} alt="play" className={`h-[35px] ${isPlaying ? 'pause' : 'play'}`} />
         </button>
       </div>
-      <div className="flex justify-center align-middle gap-4 notes">
+      <div className="flex justify-center items-center gap-4 notes">
         <div className={beatMode === 1 ? 'hovered' : ''}>
           <img
             src={jedan}

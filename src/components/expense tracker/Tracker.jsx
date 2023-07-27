@@ -101,7 +101,7 @@ const Tracker = () => {
   }
 
   return (
-    <div className='flex flex-col container gap-[0.5rem] relative justify-center align-middle'>
+    <div className='flex flex-col container gap-[0.5rem] relative justify-center items-center'>
       <div className='currency'>
         <h4 onClick={convert} className={cur==="eur" ? "active" : ""} >EUR</h4>
         <h4 onClick={convert} className={cur==="rsd" ? "active" : ""}>RSD</h4>
@@ -110,15 +110,15 @@ const Tracker = () => {
         <h5>Exchange rate:</h5>
         <h5>{kursEvra.toFixed(3) +" rsd"}</h5>
       </div>
-        <h2 className='title'>Expense Tracker</h2>
+        <h2 className='title pb-[10px]'>Expense Tracker</h2>
         <form onSubmit={handleAdd}>
-        <div className="flex flex-col justify-center align-middle">
+        <div className="flex flex-col justify-center items-center">
             <h3>YOUR BALANCE:</h3>
             <h1 className={`p-1 ${balance>=0 ? "bg-green-600" : "bg-red-600"}`}>{balance} <span >{cur==="rsd" ? "RSD" : "EUR"}</span></h1>
         </div>
-        <div className="flex flex-col justify-center align-middle gap-[5px] trans-history">
-            <div className='flex flex-row justify-center align-middle space'>
-            <h2>History</h2>
+        <div className="flex flex-col justify-center items-center gap-[5px] trans-history">
+            <div className='flex flex-row justify-center items-center space'>
+            <h2 className='pb-[10px]'>History</h2>
             <img src={trash} alt="" className='kanta' onClick={()=> (setTransactions([]), setBalance(0))}/>
             </div>
             <hr />
@@ -126,7 +126,7 @@ const Tracker = () => {
                 {transactions.map((transaction)=>(
                       //ITEMS
                       <>
-                      <div className='item-tracker flex flex-row justify-center align-middle relative' key={transaction.id} onMouseOver={mouseOver} onMouseOut={mouseOut}>
+                      <div className='item-tracker flex flex-row justify-center items-center relative' key={transaction.id} onMouseOver={mouseOver} onMouseOut={mouseOut}>
                         <h3>{transaction.text}</h3>
                         <h3 style={transaction.amount>0 ? {color:"green"} : {color:"red"}}>{transaction.amount+" "}{transaction.currency}</h3>
                         <img src={remove} alt="" className="remove-tracker" onClick={()=>handleDelete(transaction)}/>
@@ -140,8 +140,8 @@ const Tracker = () => {
             </div>
       
             </div>
-        <div className="flex flex-col justify-center align-middle gap-[5px] relative">
-            <h2>Add a transaction </h2>
+        <div className="flex flex-col justify-center items-center gap-[5px] relative">
+            <h2 className='pb-[10px]'>Add a transaction </h2>
             <hr />
               
             <label htmlFor="name">Text</label>
@@ -160,7 +160,7 @@ const Tracker = () => {
             onChange={(e)=> setAmount(e.target.value)} 
             onKeyPress={(e)=> e.key=="Enter" ? handleAdd(e) : "" } />            
         </div>
-        <div className="flex"><button className='add-tracker mt-4' type='submit'>Add transaction</button></div>
+        <div className="flex justify-center items-center"><button className='add-tracker mt-4' type='submit'>Add transaction</button></div>
         </form>
     </div>
   )

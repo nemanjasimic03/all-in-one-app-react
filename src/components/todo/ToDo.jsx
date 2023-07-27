@@ -25,10 +25,10 @@ const ToDo = () => {
 
   return (
     <>
-      <div className="flex">
-        <div className="card flex column">
+      <div className="flex flex-col justify-center items-center">
+        <div className="card flex flex-col justify-center items-center">
           <h1>To Do List</h1>
-          <div className="bar flex">
+          <div className="bar flex justify-center items-center">
             <input
               type="text"
               placeholder="Add your task"
@@ -41,7 +41,7 @@ const ToDo = () => {
               Add
             </button>
           </div>
-          <div className="lista flex column">
+          <div className="lista flex flex-col justify-center items-center">
             {tasks.map((task) => (
               <Task
                 id={task.id}

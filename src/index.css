@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Poppins&display=swap');
+
+.fancy-font{
+    font-family: 'Eczar', serif;
+}
 
 body {
   margin: 0;
@@ -14,4 +19,42 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.fade-right-start {
+  right: -100%;
+  transition: right 0.5s ease-out;
+}
+
+@keyframes slide-in {
+  from { right: -100%; }
+  to { right: 0; }
+}
+
+/* Animation for closing the sidebar */
+@keyframes slide-out {
+  from { right: 0; }
+  to { right: -100%; }
+}
+
+/* Apply the animations */
+.fade-right-open {
+  animation: slide-in 0.3s ease-out;
+  right: 0;
+}
+
+.fade-right-close {
+  animation: slide-out 0.5s ease-out;
+  right: -100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin{
+  animation: spin 5s linear infinite;
 }

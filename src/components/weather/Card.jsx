@@ -14,7 +14,6 @@ const Card = () => {
       let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`);
       let responseJSON = await response.json();
       setData(responseJSON);
-      console.log(responseJSON)
     }
 
     useEffect(()=>{
@@ -33,8 +32,8 @@ const Card = () => {
     return (
         <>
       
-          <div className={`${styles.card} flex-col flex text-white`}>
-            <div className="flex-row flex justify-center align-middle">
+          <div className={`${styles.card} flex-col flex text-white sm:w-34`}>
+            <div className="flex-row flex justify-center items-center">
               <input
                 type="text"
                 placeholder="Enter the city"
@@ -50,8 +49,8 @@ const Card = () => {
                 onClick={handleClick}
               />
             </div>
-            <div className="flex flex-col justify-center align-middle">
-              {data.name ? <h2>Weather in: {data.name}</h2> : <h2>Invalid city</h2>}
+            <div className="flex flex-col justify-center items-center">
+              {data.name ? <h2 className="pb-[10px]">Weather in: {data.name}</h2> : <h2 className="pb-[10px]">Invalid city</h2>}
               
              {data.main && <h1>{data.main.temp} °C</h1>}
               <img  
@@ -60,7 +59,7 @@ const Card = () => {
                 className={styles.weatherImg}
                 // onClick={setLocation(location)}
               />
-              <div className="flex-col flex gap-[5px] justify-center align-middle">
+              <div className="flex-col flex gap-[5px] justify-center items-center">
                {data.wind && <h3>Wind: {data.wind.speed} km/h</h3>}
               {data.main && <h3>Humidity: {data.main.humidity} %</h3>}
               {data.main && <h3>Pressure: {data.main.pressure} mb</h3> }

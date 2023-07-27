@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Poppins&display=swap');
-.fancy-font{
-    font-family: 'Eczar', serif;
-}
+
 input[type="range"] {
     -webkit-appearance: none;
     width: 320px;

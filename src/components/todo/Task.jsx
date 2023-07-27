@@ -20,8 +20,8 @@ const Task = ({ id, body, tasks, setTasks }) => {
   else {
     const textDecoration = status ? 'line-through' : 'none';
     return (
-      <div className="item flex">
-        <div className="item-text flex" onClick={handleClick}>
+      <div className="item flex justify-center items-center">
+        <div className="item-text flex justify-center items-center" onClick={handleClick}>
           <img src={status ? checked : unchecked} className="circle" />
           <h3 className="h3" style={{ textDecoration }}>
             {body}

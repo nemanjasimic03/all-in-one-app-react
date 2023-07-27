@@ -22,14 +22,17 @@ const Home = () => {
   }
   return (
     <>
+    <div className='flex flex-col justify-center items-center mb-3'>
       <h1 className='text-black text-8xl text-center p-8 fancy-font'>All in One App</h1>
-      <div className='App flex flex-row gap-[20px] flex-wrap relative'>
-        {render && components.map((Comp) => (
-          <Comp key={Comp.name} onClick={handleRend} />
-        ))}
+        <div className='App flex flex-row gap-[20px] flex-wrap relative justify-center items-center'>
+          {render && components.map((Comp) => (
+            <Comp key={Comp.name} onClick={handleRend} />
+          ))}
 
-        <Sidebar setrender={setrender} render={render} handleRend={(handleRend)}/>
-      </div>
+          <Sidebar setrender={setrender} render={render} handleRend={(handleRend)}/>
+        </div>
+    </div>
+
     </>
   );
 };  

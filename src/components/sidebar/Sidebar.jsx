@@ -10,7 +10,7 @@ const Sidebar = ({setrender,render,handleRend}) => {
   const [newApps, setnewApps] = useState(apps);
   const [isOpen, setisOpen] = useState(false);
   const [sidebarApps,setsideBarApps]=useState(apps)
-
+  const active = " opacity-100 text-black"
   // newApps.some((app) => app === clickedApp)
   const handleRender = (clickedApp) => {
     let filteredApps;
@@ -29,31 +29,33 @@ const Sidebar = ({setrender,render,handleRend}) => {
   };
   return (
     <>
-    
+      <div className='w-[70px] h-[70px] fixed bottom-0 right-0 bg-white rounded-lg opacity-90 hover:opacity-100 shadow shadow-black'></div>
       <FiSettings
-        className={`text-6xl mb-1 p-1 hover:shadow-2xl hover:text-[60px] transition-all opacity-80 hover:opacity-100 ${
+        className={`spin hover:animate-none text-[71px] p-2 hover:text-[69px] transition-all opacity-100  ${
           isOpen ? 'rotate-90' : 'rotate-0'
-        } cursor-pointer right-5 bottom-5 fixed z-50`}
+        } cursor-pointer right-[-2px] bottom-0 rounded-md fixed z-50`}
         onClick={() => setisOpen(!isOpen)}
       />
       {isOpen && (
-        <div className='h-screen w-[310px] bg-white bg-opacity-90 top-0 right-0 fixed'>
-          <div className='flex flex-row gap-3 my-7'>
+        <div className={`h-screen w-[310px] bg-white bg-opacity-90 top-0 right-[-100%] fixed ${isOpen ? "fade-right-open " : ""}`}>
+          <div className='flex flex-row justify-center items-center gap-3 my-7'>
             <RxAllSides className='text-4xl font-bold' />
             <h1 className='text-3xl'>All in One App</h1>
           </div>
 
-          <div className='w-full flex-col justify-start align-start'>
+          <div className='w-full flex flex-col justify-start align-start'>
             <h2 className='opacity-75 text-2xl py-5 ml-4'>APPS</h2>
-            <div className='flex flex-col gap-7 mt-3'>
+            <div className='flex flex-col gap-7 mt-3 justify-center items-center'>
               {sidebarApps.map((app) => (
                 <div
                   key={app.name}
-                  className='flex w-full h-8 flex-row justify-between align-middle opacity-60 cursor-pointer relative hover:opacity-90 hover:scale-105 hover:transition-transform'
+                  className={`${apps.includes(app) ? "opacity-90 scale-105 " : "opacity-40 "}flex w-full h-8 flex-row justify-between items-center cursor-pointer relative hover:opacity-90 hover:scale-104 hover:transition-transform`}
                   onClick={() => handleRender(app)}
                 >
-                  <app.icon className='text-3xl absolute top-[-4px] mr-2 left-9' />
-                  <h2 className='text-2xl absolute left-[6.3rem]'>{app.name}</h2>
+                  {console.log(apps.includes(app))}
+                  
+                  <app.icon className='text-3xl absolute mr-2 left-9' />
+                  <h2 className='text-2xl opacity-100 absolute left-[6.3rem]'>{app.name}</h2>
                 </div>
               ))}
             </div>
