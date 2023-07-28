@@ -1,14 +1,16 @@
-import React, { useState,useContext } from 'react';
-import { AppContext } from './appContext';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import Worksheet from './pages/Worksheet';
 
 function App() {
-  
-  const { components } = useContext(AppContext);
   return (
-    <>
-      <Home/>   
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/worksheet" element={<Worksheet />} />
+      </Routes>
+    </Router>
   );
 }
 

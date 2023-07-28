@@ -1,19 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
-import Tracker from '../components/expense tracker/Tracker';
-import Metronome from '../components/metronome/Metronome';
-import ToDo from '../components/todo/ToDo';
-import Card from '../components/weather/Card';
-import { AppContext } from '../appContext';
 import { apps } from '../apps';
+import Navbar from '../components/navbar/Navbar';
+import Lottie from "lottie-react"
+import animation1 from "../assets/animation_lkmfqwq9.json"
+import animation2 from "../assets/animation_lkmfyvx9.json"
+import {Link} from "react-router-dom"
+import animation3 from "../assets/Mvp9eC6AET (1).json"
 
 const Home = () => {
-  const [components, setComponents] = useState(apps.map((app) => app.jsx));
 
-  useEffect(() => {
-    setComponents(apps.map((app) => app.jsx));
-    setrender(!render)
-  }, [apps]);
 
   const [render, setrender] = useState(false)
 
@@ -22,15 +18,32 @@ const Home = () => {
   }
   return (
     <>
-    <div className='flex flex-col justify-center items-center mb-3'>
-      <h1 className='text-black text-8xl text-center p-8 fancy-font'>All in One App</h1>
-        <div className='App flex flex-row gap-[20px] flex-wrap relative justify-center items-center'>
-          {render && components.map((Comp) => (
-            <Comp key={Comp.name} onClick={handleRend} />
-          ))}
 
-          <Sidebar setrender={setrender} render={render} handleRend={(handleRend)}/>
-        </div>
+    <div className='flex flex-col justify-center items-center mb-3 bg-white relative'>
+      <Sidebar setrender={setrender} render={render} handleRend={(handleRend)}/>
+      <Navbar/>
+      <Lottie animationData={animation3} className='absolute top-9  left-[-40px]'/>
+
+          <div className="hero min-h-screen w-full flex flex-row justify-around items-center">
+
+            <div className='max-w-2xl pl-3 flex flex-col gap-7 justify-center items-center'>
+              <h1 className='text-7xl fancy-font font-bold'>Lorem ipsum dolor sit amet.</h1>
+              <h2 className='text-3xl fancy-font opacity-90'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis atque sunt quibusdam, aspernatur alias voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+              <div className="flex flex-row justify-around items-center gap-10 self-start">
+                <Link to="/worksheet"> <button className='text-2xl py-2 px-4 hover:bg-black hover:text-white border-2 font-bold border-black transition-all'>Worksheet</button></Link> 
+                <button className='text-2xl py-2 px-4 hover:bg-black hover:text-white border-2 font-bold border-black transition-all'>Download</button>
+              </div>
+            </div>
+           
+            <div className='relative bottom-5 flex flex-col justify-center items-center pr-3'>
+              <Lottie animationData={animation1}/>
+              <Lottie animationData={animation2} className='absolute bottom-[-35%]'/>
+            </div>
+          </div>
+
+          <section className='min-h-screen bg-neutral-900 flex flex-col justify-center items-center'>
+              <h1 className='fancy-font text-5xl text-white opacity-90'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, doloremque.</h1>
+          </section>
     </div>
 
     </>

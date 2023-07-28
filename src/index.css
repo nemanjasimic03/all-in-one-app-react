@@ -58,3 +58,8 @@ code {
 .spin{
   animation: spin 5s linear infinite;
 }
+
+.active-link{
+  opacity: 100;
+  color: black;
+}

@@ -29,7 +29,7 @@ const Sidebar = ({setrender,render,handleRend}) => {
   };
   return (
     <>
-      <div className='w-[70px] h-[70px] fixed bottom-0 right-0 bg-white rounded-lg opacity-90 hover:opacity-100 shadow shadow-black'></div>
+      <div className=' w-[70px] h-[70px] fixed bottom-0 right-0 bg-white rounded-lg opacity-90 hover:opacity-100 shadow shadow-black'></div>
       <FiSettings
         className={`spin hover:animate-none text-[71px] p-2 hover:text-[69px] transition-all opacity-100  ${
           isOpen ? 'rotate-90' : 'rotate-0'
@@ -37,7 +37,7 @@ const Sidebar = ({setrender,render,handleRend}) => {
         onClick={() => setisOpen(!isOpen)}
       />
       {isOpen && (
-        <div className={`h-screen w-[310px] bg-white bg-opacity-90 top-0 right-[-100%] fixed ${isOpen ? "fade-right-open " : ""}`}>
+        <div className={`z-40 h-screen w-[310px] bg-white bg-opacity-90 top-0 right-[-100%] fixed ${isOpen ? "fade-right-open " : ""}`}>
           <div className='flex flex-row justify-center items-center gap-3 my-7'>
             <RxAllSides className='text-4xl font-bold' />
             <h1 className='text-3xl'>All in One App</h1>
