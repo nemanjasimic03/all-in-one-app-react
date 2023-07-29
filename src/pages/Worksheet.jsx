@@ -23,7 +23,7 @@ const Worksheet = () => {
   }
   return (
     <>
-    <div className='flex flex-col justify-center items-center mb-3 mt-[100px]'>
+    <div className='flex flex-col justify-center items-center mb-3 pt-[120px] '>
         <div className='App flex flex-row gap-[20px] gap-x-9 flex-wrap relative justify-center items-center'>
           {render && components.map((Comp) => (
             <Comp key={Comp.name} onClick={handleRend} />
