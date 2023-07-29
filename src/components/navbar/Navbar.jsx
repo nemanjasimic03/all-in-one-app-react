@@ -7,7 +7,7 @@ import { FiSettings } from 'react-icons/fi';
 const Navbar = ({isOpen,setisOpen}) => {
 
   return (
-    <div className='z-40 py-3 fixed top-0 left-0 w-full flex flex-row sm:justify-around items-center bg-white opacity-90 shadow-md'>
+    <div className='z-40 py-3 fixed top-0 left-0 w-full flex flex-row sm:justify-around items-center bg-white opacity-[94%] shadow-md'>
         <div className='flex flex-row justify-center items-center pl-3 sm:p-0 gap-3 my-1'>
             <RxAllSides className=' text-3xl sm:text-4xl font-bold' />
             <Link to="/"><h2 className=' text-2xl sm:text-3xl'>All in One App</h2></Link>      
