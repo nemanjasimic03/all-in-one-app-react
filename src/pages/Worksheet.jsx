@@ -17,7 +17,7 @@ const Worksheet = () => {
   }, [apps]);
 
   const [render, setrender] = useState(false)
-
+  const [isOpen, setisOpen] = useState(false);
   const handleRend = () =>{
       setrender(!render)
   }
@@ -29,8 +29,8 @@ const Worksheet = () => {
             <Comp key={Comp.name} onClick={handleRend} />
           ))}
 
-          <Sidebar setrender={setrender} render={render} handleRend={(handleRend)}/>
-          <Navbar/>
+          <Sidebar setisOpen={setisOpen} isOpen={isOpen} setrender={setrender} render={render} handleRend={(handleRend)}/>
+          <Navbar setisOpen={setisOpen} isOpen={isOpen}/>
         </div>
     </div>
 

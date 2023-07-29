@@ -23,7 +23,7 @@ const Navbar = ({isOpen,setisOpen}) => {
           <Link target='_blank' to="https://www.instagram.com/nemanja_s3/"><FaInstagramSquare className='text-3xl hover:text-[33px] transition-all'/></Link>
         </div>
         <FiSettings
-        className={`fixed right-1 ml-3 md:hidden spin hover:animate-none text-[58px] p-2 transition-all opacity-90  ${
+        className={`fixed right-[6px] ml-3 md:hidden spin hover:animate-none text-[54px] p-2 transition-all opacity-90  ${
           isOpen ? 'rotate-90' : 'rotate-0'
         } cursor-pointer rounded-md z-50`}
         onClick={() => setisOpen(!isOpen)}
