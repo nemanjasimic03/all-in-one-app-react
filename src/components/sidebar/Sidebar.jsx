@@ -41,7 +41,7 @@ const Sidebar = ({isOpen,setisOpen,setrender,render,handleRend}) => {
         onClick={() => setisOpen(!isOpen)}
       />
       {isOpen && (
-        <div className={`pt-[70px] z-[40] h-screen w-[270px] sm:w-[310px] bg-white bg-opacity-[95%] top-0 right-[-100%] fixed ${isOpen ? "fade-right-open " : ""}`}>
+        <div className={`pt-[70px] z-[40] h-screen w-[260px] sm:w-[310px] bg-white bg-opacity-[95%] top-0 right-[-100%] fixed ${isOpen ? "fade-right-open " : ""}`}>
           <div className='hidden md:flex flex-row justify-center items-center gap-3 my-7'>
             <RxAllSides className='text-4xl font-bold' />
             <h1 className='text-3xl'>All in One App</h1>

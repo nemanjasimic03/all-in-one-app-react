@@ -10,6 +10,8 @@ import animation3 from "../assets/Mvp9eC6AET (1).json"
 import img1 from "../assets/img1.png"
 import {FaChrome,FaAppStore} from "react-icons/fa"
 import {MdOutlineDashboardCustomize} from "react-icons/md"
+import Accordion from '../components/accordion/Accordion';
+import Footer from '../components/footer/Footer';
 
 
 const Home = () => {
@@ -23,7 +25,7 @@ const Home = () => {
   return (
     <>
 
-    <div className='px-2 flex flex-col justify-center items-center mb-3 bg-white relative'>
+    <div className='px-2 flex flex-col justify-center items-center bg-white relative'>
       <Sidebar isOpen={isOpen} setisOpen={setisOpen} setrender={setrender} render={render} handleRend={(handleRend)}/>
       <Navbar isOpen={isOpen} setisOpen={setisOpen} />
      
@@ -31,7 +33,7 @@ const Home = () => {
           <div className="min-h-[87vh] sm:min-h-screen pt-[100px] sm:pt-[90px] w-full flex lg:flex-row justify-center gap-5 lg:justify-around items-center flex-col">
 
             <div className='z-30 max-w-[60rem] pl-3 sm:pl-5 flex flex-col gap-3 sm:gap-7 justify-center'>
-              <h1 className='text-3xl md:text-7xl fancy-font font-bold pr-3 sm:pr-0'>All-in-One App </h1>
+              <h1 className='text-3xl md:text-7xl fancy-font font-bold pr-3 sm:pr-0 drop-shadow-md text-yellow-600 '>All-in-One <span className='text-black fancy-font'>App</span>  </h1>
               <h1 className='text-2xl md:text-4xl fancy-font font-bold pr-3 sm:pr-0'> Ultimate Organizer for Seamless Productivity! </h1>
               <h2 className='texl-l lg:text-3xl fancy-font opacity-90'>Tired of switching through numerous apps? Look no further! Introducing All-in-One App, your one-stop solution for streamlining your digital life and maximizing efficiency.</h2>
               <div className="flex flex-row justify-around items-center gap-10 self-start">
@@ -69,9 +71,8 @@ const Home = () => {
                 </div>
             </div>
           </section>
-          <section className='h-screen bg-white'>
-
-          </section>
+        <Accordion/>
+        <Footer/>
     </div>
 
     </>

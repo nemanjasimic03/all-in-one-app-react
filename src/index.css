@@ -35,7 +35,25 @@ code {
   from { right: 0; }
   to { right: -100%; }
 }
-
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.slide-in-top {
+  animation: slide-in-top 0.15s ease-in-out;
+}
+.faq{
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  height: 50px;
+}
+.faq-open{
+  height:100px;
+}
 /* Apply the animations */
 .fade-right-open {
   animation: slide-in 0.3s ease-out;
