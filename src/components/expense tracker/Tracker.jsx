@@ -113,8 +113,8 @@ const Tracker = () => {
         <h2 className='title pb-[10px]'>Expense Tracker</h2>
         <form onSubmit={handleAdd}>
         <div className="flex flex-col justify-center items-center">
-            <h3>YOUR BALANCE:</h3>
-            <h1 className={`p-1 ${balance>=0 ? "bg-green-600" : "bg-red-600"}`}>{balance} <span >{cur==="rsd" ? "RSD" : "EUR"}</span></h1>
+            <h3 className='text-sm sm:text-lg' >YOUR BALANCE:</h3>
+            <h1 className={`text-[22px] p-1 ${balance>=0 ? "bg-green-600" : "bg-red-600"}`}>{balance} <span >{cur==="rsd" ? "RSD" : "EUR"}</span></h1>
         </div>
         <div className="flex flex-col justify-center items-center gap-[5px] trans-history">
             <div className='flex flex-row justify-center items-center space'>
@@ -146,7 +146,7 @@ const Tracker = () => {
               
             <label htmlFor="name">Text</label>
             <input name="name" type="text" 
-            className='input-tracker'
+            className='input-tracker '
             value={text}
             required
             onChange={(e)=>{setText(e.target.value)}}

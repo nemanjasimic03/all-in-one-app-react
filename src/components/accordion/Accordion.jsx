@@ -26,8 +26,8 @@ const Accordion = () => {
                     <h2>How many items are there in this list on your app?</h2>
                     <FcExpand className={`text-xl ${isopen2 ? "rotate-180" : ""}`}/>
                 </div>
-                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-2xl order'>
-                    <h2 className='opacity-80 '>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h2>
+                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-xl order'>
+                    <h3 className='opacity-80 '>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h3>
                 </div>
             </div>
             <div className={`${isopen2 ? "faq-open sm:h-[100px]" : ""} sm:w-full  faq z-10 flex flex-col  items-center gap-3 cursor-pointer `}>
@@ -35,8 +35,8 @@ const Accordion = () => {
                     <h2>How many items are there in this list on your app?</h2>
                     <FcExpand className={`text-xl ${isopen2 ? "rotate-180" : ""}`}/>
                 </div>
-                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-2xl order'>
-                    <h2 className='opacity-80'>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h2>
+                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-xl order'>
+                    <h3 className='opacity-80'>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h3>
                 </div>
             </div>
             <div className={`${isopen3 ? "faq-open sm:h-[100px]" : ""} sm:w-full  faq z-10 flex flex-col  items-center gap-3 cursor-pointer`}>
@@ -44,8 +44,8 @@ const Accordion = () => {
                     <h2>How many items are there in this list on your app?</h2>
                     <FcExpand className={`text-xl ${isopen2 ? "rotate-180" : ""}`}/>
                 </div>
-                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-2xl order'>
-                    <h2 className='opacity-80'>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h2>
+                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-xl order'>
+                    <h3 className='opacity-80'>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h3>
                 </div>
             </div>
             <div className={`${isopen4 ? "faq-open sm:h-[100px]" : ""} sm:w-full  faq z-10 flex flex-col  items-center gap-3 cursor-pointer`}>
@@ -53,8 +53,8 @@ const Accordion = () => {
                     <h2>How many items are there in this list on your app?</h2>
                     <FcExpand className={`text-xl ${isopen4 ? "rotate-180" : ""}`}/>
                 </div>
-                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-2xl order'>
-                    <h2 className='opacity-80'>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h2>
+                <div className='flex pl-4 sm:pl-8 items-center sm:w-full pt-2 sm:text-xl order'>
+                    <h3 className='opacity-80'>Lorem ipsum dolor, laborum non omnis ipsa atque ad.</h3>
                 </div>
             </div>
 

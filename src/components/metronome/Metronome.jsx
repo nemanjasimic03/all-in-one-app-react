@@ -67,9 +67,9 @@ const Metronome = () => {
   };
 
   return (
-    <div className="flex flex-col bg-neutral-900 opacity-90 h-[530px] self-center gap-10 justify-center w-[530px]">
+    <div className="flex flex-col bg-neutral-900 opacity-90 h-[390px] sm:h-[530px] self-center gap-3 sm:gap-10 justify-center w-[97vw] sm:w-[530px]">
       <div className="flex flex-row justify-center">
-        <h1 className="text-[105px] font-bold text-orange-500 fancy-font">
+        <h1 className="text-[70px] sm:text-[105px] font-bold text-orange-500 fancy-font">
           {tempo}
           <span className="text-[50px] fancy-font "> BPM</span>
         </h1>
@@ -91,13 +91,14 @@ const Metronome = () => {
         </button>
       </div>
       <div className="flex flex-row justify-center items-center">
-        <button onClick={handlePlayPause} className="p-[20px] hover:bg-orange-500 rounded-full bg-white">
-          <img src={isPlaying ? pauseBtn : playBtn} alt="play" className={`h-[35px] ${isPlaying ? 'pause' : 'play'}`} />
+        <button onClick={handlePlayPause} className="p-3 text-sm sm:p-[20px] hover:bg-orange-500 rounded-full bg-white">
+          <img src={isPlaying ? pauseBtn : playBtn} alt="play" className={`h-7 sm:h-[35px] ${isPlaying ? 'pause' : 'play'}`} />
         </button>
       </div>
       <div className="flex justify-center items-center gap-4 notes">
         <div className={beatMode === 1 ? 'hovered' : ''}>
           <img
+            className='w-[30px] sm:w-auto'
             src={jedan}
             alt=""
             onClick={() => setBeatModeHandler(1)}

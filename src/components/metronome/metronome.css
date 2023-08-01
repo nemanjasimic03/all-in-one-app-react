@@ -89,3 +89,16 @@ input[type="range"] {
   .hovered{
     background-color: rgb(249, 115, 22) !important;
   }
+  @media (max-width:600px){
+    .notes div{
+      width: 75px;
+      height: 70px;
+    }
+    .controlBar img{
+      width: 27px;
+      padding:8px;
+    }
+    input[type="range"]{
+      width: 220px;
+    }
+  }

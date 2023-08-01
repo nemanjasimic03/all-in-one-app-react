@@ -22,7 +22,7 @@ h1{
 .column{
     flex-direction: column;
 }
-section{
+.section{
     height: 100vh;
     width: 100vw;
 }
@@ -94,4 +94,10 @@ width: 100%;
 .remove{
     cursor: pointer;
     width: 37px;    
+}
+@media (max-width:600px){
+    .card{
+        width: 96vw;
+        padding: 1.2rem 0rem;
+    }
 }

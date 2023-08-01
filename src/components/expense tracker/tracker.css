@@ -11,8 +11,8 @@
     padding-top: 1rem;
   }
   .column{
-    width: 440px
-    /* background-color: red;  */
+    width: 440px;
+    background-color: red; 
   }
   .input-tracker{
     width: 350px;
@@ -149,15 +149,44 @@
 
   @media (max-width:500px){
     .container{
-      width: 90vw;
+      width: 97vw;
+      padding: 1.5rem 1rem 0.8rem 1rem;
     }
     .column{
-      width: 90vw;
+      /* width: 85vw; */
     }
     input {
-      width: 78%;
+      width: 70vw;
     }
     .add-tracker{
-      width: 78%;
+      width: 73%;
+      padding: 6px ;
+    }
+    .input-tracker{
+      width: 87vw;
+      font-size:1rem ;
+      padding: 4px 7px;
+    }
+    label{
+      font-size: 1rem;
+    padding-left: 1.7rem;
+    }
+    .add-tracker{
+      padding: 8px;
+      font-size: 1rem;
+      width: 270px;
+    }
+    .item-tracker{
+      width: 82%;
+      padding: 0 8px;
+      position: relative;
+      left: 1rem;
+    }
+    .history-items{
+      width: 370px;
+      gap: 4px;
+    }
+    .trans-history{
+      overflow-x: hidden;
     }
   }

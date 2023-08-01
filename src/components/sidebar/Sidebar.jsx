@@ -33,11 +33,13 @@ const Sidebar = ({isOpen,setisOpen,setrender,render,handleRend}) => {
   };
   return (
     <>
-      <div className=' w-[70px] h-[70px] hidden sm:fixed bottom-0 right-0 bg-white rounded-lg opacity-90 hover:opacity-100 shadow shadow-black'></div>
+      <div className=' w-[200px] h-[200px] z-20 hidden sm:block sm:fixed bottom-[-115px] right-[-115px] bg-white rounded-full opacity-100 hover:opacity-100 shadow-lg shadow-black'></div>
+      {/* <div className=' w-[20px] h-[20px] z-20 hidden sm:block sm:fixed bottom-[24px] right-[24px] bg-white rounded-[50%] opacity-100 hover:opacity-100 shadow shadow-black'></div> */}
+
       <FiSettings
-        className={`hidden sm:block spin hover:animate-none text-[71px] p-2 hover:text-[69px] transition-all opacity-100  ${
+        className={` hidden sm:block spin hover:animate-none text-[66px] p-2 hover:text-[63px] transition-all opacity-100  ${
           isOpen ? 'rotate-90' : 'rotate-0'
-        } cursor-pointer right-[-2px] bottom-0 rounded-md fixed z-50`}
+        } cursor-pointer right-[-4px] bottom-0 rounded-md fixed z-50`}
         onClick={() => setisOpen(!isOpen)}
       />
       {isOpen && (
