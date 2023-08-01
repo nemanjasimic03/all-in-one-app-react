@@ -29,7 +29,6 @@ const Home = () => {
       <Sidebar isOpen={isOpen} setisOpen={setisOpen} setrender={setrender} render={render} handleRend={(handleRend)}/>
       <Navbar isOpen={isOpen} setisOpen={setisOpen} />
      
-
           <div className="min-h-[87vh] sm:min-h-screen pt-[100px] sm:pt-[90px] w-full flex lg:flex-row justify-center gap-5 lg:justify-around items-center flex-col">
 
             <div className='z-30 max-w-[60rem] pl-3 sm:pl-5 flex flex-col gap-3 sm:gap-7 justify-center'>
@@ -48,7 +47,7 @@ const Home = () => {
             </div>
           </div>
 
-          <section className='h-[820px] sm:h-[700px] py-5 bg-neutral-900 flex flex-col sm:flex-row justify-center items-center gap-8 relative backdrop-blur-sm'>
+          <section className='h-[820px] sm:h-[700px] py-5 bg-neutral-950 flex flex-col sm:flex-row justify-center items-center gap-8 relative backdrop-blur-sm'>
           <Lottie animationData={animation3} className='absolute sm:top-[200px] sm:left-[420px] top-[140px] right-12 w-[320px] sm:w-[560px]'/>
             <div className='h-[820px] sm:h-[700px] py-5  flex flex-col sm:flex-row justify-center items-center gap-8 relative backdrop-blur-[3px]'>
               <div className='flex flex-col justify-center items-center gap-9 sm:w-[930px] '>
